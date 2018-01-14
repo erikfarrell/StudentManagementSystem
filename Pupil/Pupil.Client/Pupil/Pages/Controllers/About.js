@@ -5,6 +5,8 @@
         });
 });
 
-pupilApp.controller('aboutController', function ($scope) {
+pupilApp.controller('aboutController', ['$scope', 
+    function ($scope) {
     $scope.message = 'About Page!';
-});
+    }
+]);

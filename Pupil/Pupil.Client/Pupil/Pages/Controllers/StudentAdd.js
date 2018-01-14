@@ -1,10 +1,11 @@
-﻿pupilApp.config(function ($routeProvider) {
-    $routeProvider.when('/students/add', {
-        templateUrl: '/Pupil/Pages/Views/StudentAdd.html',
-        controller: 'studentAddController'
-    });
-});
+﻿pupilApp.controller('studentAddController', function ($uibModalInstance) {
+    var $ctrl = this;
 
-pupilApp.controller('studentAddController', function ($scope) {
-    $scope.message = 'Student Add!';
+    $ctrl.ok = function () {
+        $uibModalInstance.close();
+    };
+
+    $ctrl.cancel = function () {
+        $uibModalInstance.dismiss('cancel');
+    };
 });

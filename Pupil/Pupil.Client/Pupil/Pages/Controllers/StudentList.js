@@ -14,3 +14,15 @@ pupilApp.config(function ($routeProvider) {
 pupilApp.controller('studentListController', function ($scope) {
     $scope.message = 'Student Page!';
 });
+
+pupilApp.controller('studentListController', function ($uibModal, $log, $document) {
+    this.open = function (size, parentSelector) {
+        var modalInstance = $uibModal.open({
+            animation: true,
+            templateUrl: '/Pupil/Pages/Views/StudentAdd.html',
+            controller: 'studentAddController',
+            controllerAs: '$ctrl',
+            size: size
+        });
+    };
+});
