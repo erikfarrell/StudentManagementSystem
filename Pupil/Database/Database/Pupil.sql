@@ -1,0 +1,2 @@
+IF NOT EXISTS(SELECT * FROM sys.databases WHERE NAME = 'Pupil')
+    CREATE DATABASE Pupil
