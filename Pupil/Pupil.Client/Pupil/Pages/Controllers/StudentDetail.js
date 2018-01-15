@@ -1,4 +1,4 @@
-﻿pupilApp.controller('studentAddController', function ($scope, $http, $uibModalInstance) {
+﻿pupilApp.controller('studentDetailController', function ($scope, $http, $uibModalInstance) {
     var $ctrl = this;
     var studentForm;
 

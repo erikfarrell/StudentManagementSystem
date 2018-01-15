@@ -25,8 +25,8 @@ pupilApp.controller('studentModalController', function ($route, $uibModal, $log,
     this.add = function () {
         var modalInstance = $uibModal.open({
             animation: true,
-            templateUrl: '/Pupil/Pages/Views/StudentAdd.html',
-            controller: 'studentAddController',
+            templateUrl: '/Pupil/Pages/Views/StudentDetail.html',
+            controller: 'studentDetailController',
             controllerAs: '$ctrl',
             size: 'lg'
         }).closed.then(function () {
@@ -37,8 +37,8 @@ pupilApp.controller('studentModalController', function ($route, $uibModal, $log,
     this.edit = function (id) {
         var modalInstance = $uibModal.open({
             animation: true,
-            templateUrl: '/Pupil/Pages/Views/StudentAdd.html',
-            controller: 'studentAddController',
+            templateUrl: '/Pupil/Pages/Views/StudentDetail.html',
+            controller: 'studentDetailController',
             controllerAs: '$ctrl',
             size: 'lg'
         }).closed.then(function () {

@@ -79,12 +79,12 @@
     <Content Include="Pupil\Pages\Controllers\About.js" />
     <Content Include="Pupil\Pages\Controllers\CourseList.js" />
     <Content Include="Pupil\Pages\Controllers\App.js" />
-    <Content Include="Pupil\Pages\Controllers\StudentAdd.js" />
+    <Content Include="Pupil\Pages\Controllers\StudentDetail.js" />
     <Content Include="Pupil\Pages\Controllers\StudentList.js" />
     <Content Include="Pupil\Pages\Views\About.html" />
     <Content Include="Pupil\Pages\Views\App.html" />
     <Content Include="Pupil\Pages\Views\CourseList.html" />
-    <Content Include="Pupil\Pages\Views\StudentAdd.html" />
+    <Content Include="Pupil\Pages\Views\StudentDetail.html" />
     <Content Include="Pupil\Pages\Views\StudentList.html" />
     <Content Include="Pupil\Style\Pupil.css" />
     <Content Include="Web.config">
