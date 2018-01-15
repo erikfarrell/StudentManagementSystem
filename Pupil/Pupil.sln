@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pupil.Prototype", "Pupil.Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pupil.Entities", "Pupil.Entities\Pupil.Entities.csproj", "{0B2B0F37-E4F9-4677-AA5D-3C58F9F66BB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pupil.API", "Pupil.API\Pupil.API.csproj", "{7B5CA1CB-0C6F-484A-BC93-ABE83CD92B57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0B2B0F37-E4F9-4677-AA5D-3C58F9F66BB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B2B0F37-E4F9-4677-AA5D-3C58F9F66BB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B2B0F37-E4F9-4677-AA5D-3C58F9F66BB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B5CA1CB-0C6F-484A-BC93-ABE83CD92B57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B5CA1CB-0C6F-484A-BC93-ABE83CD92B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B5CA1CB-0C6F-484A-BC93-ABE83CD92B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B5CA1CB-0C6F-484A-BC93-ABE83CD92B57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

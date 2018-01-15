@@ -26,10 +26,21 @@ namespace Pupil.Prototype.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"metadata=res://*/PupilModel.csdl|res://*/PupilModel.ssdl|res://*/PupilModel.msl;provider=System.Data.SqlClient;provider connection string=""Data Source=EEFMAIN\SQLEXPRESS01;Initial Catalog=Pupil;Integrated Security=True;MultipleActiveResultSets=True;App=EntityFramework""")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=EEFMAIN\\SQLEXPRESS01;Initial Catalog=Pupil;Integrated Security=True")]
         public string DesktopPupilConnection {
             get {
                 return ((string)(this["DesktopPupilConnection"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("metadata=res://*/PupilModel.csdl|res://*/PupilModel.ssdl|res://*/PupilModel.msl;p" +
+            "rovider=System.Data.SqlClient;provider connection string=\"{0};MultipleActiveResu" +
+            "ltSets=True;App=EntityFramework\"")]
+        public string PupilEntityFramework {
+            get {
+                return ((string)(this["PupilEntityFramework"]));
             }
         }
     }

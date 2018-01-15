@@ -5,10 +5,13 @@
     <Setting Name="DesktopPupilConnection" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;metadata=res://*/PupilModel.csdl|res://*/PupilModel.ssdl|res://*/PupilModel.msl;provider=System.Data.SqlClient;provider connection string="Data Source=EEFMAIN\SQLEXPRESS01;Initial Catalog=Pupil;Integrated Security=True;MultipleActiveResultSets=True;App=EntityFramework"&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.EntityClient&lt;/ProviderName&gt;
+  &lt;ConnectionString&gt;Data Source=EEFMAIN\SQLEXPRESS01;Initial Catalog=Pupil;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">metadata=res://*/PupilModel.csdl|res://*/PupilModel.ssdl|res://*/PupilModel.msl;provider=System.Data.SqlClient;provider connection string="Data Source=EEFMAIN\SQLEXPRESS01;Initial Catalog=Pupil;Integrated Security=True;MultipleActiveResultSets=True;App=EntityFramework"</Value>
+      <Value Profile="(Default)">Data Source=EEFMAIN\SQLEXPRESS01;Initial Catalog=Pupil;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="PupilEntityFramework" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">metadata=res://*/PupilModel.csdl|res://*/PupilModel.ssdl|res://*/PupilModel.msl;provider=System.Data.SqlClient;provider connection string="{0};MultipleActiveResultSets=True;App=EntityFramework"</Value>
     </Setting>
   </Settings>
 </SettingsFile>

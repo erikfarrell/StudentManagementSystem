@@ -20,13 +20,16 @@ namespace Pupil.Prototype
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            using (var db = new PupilEntities(Properties.Settings.Default.DesktopPupilConnection))
+            var conn = String.Format(Properties.Settings.Default.PupilEntityFramework, Properties.Settings.Default.DesktopPupilConnection);
+
+            using (var db = new PupilEntities(String.Format(Properties.Settings.Default.PupilEntityFramework, Properties.Settings.Default.DesktopPupilConnection)))
             {
                 foreach(Course course in db.Courses)
                 {
                     db.Courses.Remove(course);
-                    db.SaveChanges();
                 }
+
+                db.SaveChanges();
 
                 Course course1 = new Course{ CourseNumber = "CS-200", Title = "Introduction to Java", Capacity = 35, DateCreated = DateTime.Now, DateModified = DateTime.Now, IsActive = true };
 
