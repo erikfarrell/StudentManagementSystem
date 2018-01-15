@@ -20,20 +20,37 @@ namespace Pupil.Prototype
 
         private void btnTest_Click(object sender, EventArgs e)
         {
+            addStudent();
+        }
+
+        public void addCourse()
+        {
             var conn = String.Format(Properties.Settings.Default.PupilEntityFramework, Properties.Settings.Default.DesktopPupilConnection);
 
             using (var db = new PupilEntities(String.Format(Properties.Settings.Default.PupilEntityFramework, Properties.Settings.Default.DesktopPupilConnection)))
             {
-                foreach(Course course in db.Courses)
+                foreach (Course course in db.Courses)
                 {
                     db.Courses.Remove(course);
                 }
 
                 db.SaveChanges();
 
-                Course course1 = new Course{ CourseNumber = "CS-200", Title = "Introduction to Java", Capacity = 35, DateCreated = DateTime.Now, DateModified = DateTime.Now, IsActive = true };
+                Course course1 = new Course { CourseNumber = "CS-200", Title = "Introduction to Java", Capacity = 35, DateCreated = DateTime.Now, DateModified = DateTime.Now, IsActive = true };
 
                 db.Courses.Add(course1);
+
+                db.SaveChanges();
+            }
+        }
+
+        public void addStudent()
+        {
+            using (var db = new PupilEntities(String.Format(Properties.Settings.Default.PupilEntityFramework, Properties.Settings.Default.DesktopPupilConnection)))
+            {
+                Student student = new Student { IDNumber = "34", FirstName = "test", LastName = "test", DateCreated = DateTime.Now, DateModified = DateTime.Now, IsActive = true };
+
+                db.Students.Add(student);
 
                 db.SaveChanges();
             }

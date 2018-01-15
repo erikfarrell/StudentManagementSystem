@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
+using Pupil.API.Settings;
 using Pupil.Entities;
 using System;
 using System.Collections.Generic;
@@ -39,11 +40,15 @@ namespace Pupil.API.Controllers
         {
             Student student = jObject.ToObject<Student>();
 
+            student.DateCreated = DateTime.Now;
+            student.DateModified = DateTime.Now;
+            student.IsActive = true;
+
             Context.Students.Add(student);
 
             Context.SaveChanges();
 
-            return Ok();
+            return Ok(student.StudentID);
         }
 
         [HttpPost]

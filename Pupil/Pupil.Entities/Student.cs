@@ -15,7 +15,7 @@ namespace Pupil.Entities
     public partial class Student
     {
         public int StudentID { get; set; }
-        public int IDNumber { get; set; }
+        public string IDNumber { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public System.DateTime DateCreated { get; set; }

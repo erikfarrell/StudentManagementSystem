@@ -7,6 +7,6 @@
 
 pupilApp.controller('aboutController', ['$scope', 
     function ($scope) {
-    $scope.message = 'About Page!';
+    $scope.message = 'Erik Farrell - January 2017';
     }
 ]);

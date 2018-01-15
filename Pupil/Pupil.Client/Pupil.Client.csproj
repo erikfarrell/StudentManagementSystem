@@ -75,6 +75,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pupil\Pages\Config\Env.js" />
     <Content Include="Pupil\Pages\Controllers\About.js" />
     <Content Include="Pupil\Pages\Controllers\CourseList.js" />
     <Content Include="Pupil\Pages\Controllers\App.js" />
@@ -85,6 +86,7 @@
     <Content Include="Pupil\Pages\Views\CourseList.html" />
     <Content Include="Pupil\Pages\Views\StudentAdd.html" />
     <Content Include="Pupil\Pages\Views\StudentList.html" />
+    <Content Include="Pupil\Style\Pupil.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

@@ -1,39 +1,32 @@
-﻿<div>
-    <h1>Students Page</h1>
+﻿
+    <div>
+        <h1>Students Page</h1>
 
-    <p>{{ message }}</p>
-
-    <table class="table table-dark">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-<div ng-controller="studentListController as $modal" class="modal-demo">
-    <button type="button" class="btn btn-default" ng-click="$modal.open('lg')">Add</button>
-</div>
+        <table class="table table-fixed">
+            <thead>
+                <tr>
+                    <th class="col-xs-2">Student ID</th>
+                    <th class="col-xs-4">First Name</th>
+                    <th class="col-xs-4">Last Name</th>
+                    <th class="col-xs-2">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="student in students">
+                    <td class="col-xs-2">{{student.IDNumber}}</td>
+                    <td class="col-xs-4">{{student.FirstName}}</td>
+                    <td class="col-xs-4">{{student.LastName}}</td>
+                    <td class="col-xs-2">
+                        <button type="button" class="btn btn-default" 
+                                ng-controller="studentModalController as $modal" 
+                                ng-click="$modal.edit(student.StudentID)">Edit</button>
+                        <button type="button" class="btn btn-default" 
+                                ng-click="delete(student.StudentID)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-default" 
+                ng-controller="studentModalController as $modal" 
+                ng-click="$modal.add()">Add</button>
+    </div>

@@ -11,11 +11,12 @@ namespace Pupil.API.Controllers
 {
     public class PupilController : ApiController, IDisposable
     {
-        public PupilEntities Context => new PupilEntities(Connections.PupilConnection);
+        private PupilEntities _context;
+        public PupilEntities Context => _context;
 
         public PupilController()
         {
-
+            _context = new PupilEntities(Connections.PupilConnection);
         }
 
         protected override void Dispose(bool disposing)

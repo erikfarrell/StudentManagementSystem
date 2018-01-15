@@ -1,10 +1,28 @@
-﻿<div class="modal-header">
-    <h3 class="modal-title" id="modal-title">Add Student</h3>
-</div>
-<div class="modal-body" id="modal-body">
-    <p>test</p>
-</div>
-<div class="modal-footer">
-    <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">OK</button>
-    <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
-</div>
+﻿<form name="studentForm" ng-model="studentForm" ng-submit="$ctrl.save(student)">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Add Student</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+        <div class="form-group">
+            <label for="FirstName">First Name:</label>
+            <input type="text" class="form-control" name="FirstName" ng-model="student.FirstName" required ng-maxlength="35">
+            <p ng-show="studentForm.FirstName.$dirty && studentForm.FirstName.$error.required" class="help-block">First name is required.</p>
+            <p ng-show="studentForm.FirstName.$error.maxlength" class="help-block">First name has a maximum length of 35 characters.</p>
+        </div>
+        <div class="form-group">
+            <label for="LastName">Last Name:</label>
+            <input type="text" class="form-control" name="LastName" ng-model="student.LastName" required ng-maxlength="35">
+            <p ng-show="studentForm.LastName.$dirty && studentForm.LastName.$error.required" class="help-block">Last name is required.</p>
+            <p ng-show="studentForm.LastName.$error.maxlength" class="help-block">Last name has a maximum length of 35 characters.</p>
+        </div>
+        <div class="form-group">
+            <label for="IDNumber">Student ID Number:</label>
+            <input type="text" class="form-control" name="IDNumber" ng-model="student.IDNumber" required ng-maxlength="10" ng-minlength="10">
+            <p ng-show="studentForm.IDNumber.$error.maxlength || studentForm.IDNumber.$error.minlength" class="help-block">Student ID is 10 digits.</p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="submit">OK</button>
+        <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+    </div>
+</form>

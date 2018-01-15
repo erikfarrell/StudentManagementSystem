@@ -3,3 +3,5 @@
 pupilApp.config(['$locationProvider', function ($locationProvider) {
     $locationProvider.hashPrefix('');
 }]);
+
+pupilApp.constant('__env', window.__env);
