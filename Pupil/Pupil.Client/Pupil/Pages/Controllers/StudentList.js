@@ -1,5 +1,4 @@
-﻿//TODO: Working here
-pupilApp.config(function ($routeProvider) {
+﻿pupilApp.config(function ($routeProvider) {
     $routeProvider.when('/', {
         templateUrl: '/Pupil/Pages/Views/StudentList.html',
         controller: 'studentListController'
