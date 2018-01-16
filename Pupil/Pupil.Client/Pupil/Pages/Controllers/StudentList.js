@@ -28,7 +28,12 @@ pupilApp.controller('studentModalController', function ($route, $uibModal, $log,
             templateUrl: '/Pupil/Pages/Views/StudentDetail.html',
             controller: 'studentDetailController',
             controllerAs: '$ctrl',
-            size: 'lg'
+            size: 'lg',
+            resolve: {
+                id: function () {
+                    return null;
+                }
+            }
         }).closed.then(function () {
             $route.reload();
         });
@@ -40,7 +45,12 @@ pupilApp.controller('studentModalController', function ($route, $uibModal, $log,
             templateUrl: '/Pupil/Pages/Views/StudentDetail.html',
             controller: 'studentDetailController',
             controllerAs: '$ctrl',
-            size: 'lg'
+            size: 'lg',
+            resolve: {
+                id: function () {
+                    return id;
+                }
+            }
         }).closed.then(function () {
             $route.reload();
         });
